@@ -30,6 +30,13 @@ const generateRandomNumbers = (min, max, tot) => {
 
 console.log(generateRandomNumbers(1,50,5));
 
+// CORPO DEL PROGRAMMA
+// GENERAZIONE NUMERI CASUALI INVOCANDO LA FUNZIONE
+
+const numbers = generateRandomNumbers(min, max, totalNumbers);
+
+
+
 
 
 
