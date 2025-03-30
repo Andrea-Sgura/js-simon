@@ -12,7 +12,7 @@ const button = document.querySelector(`button`);
 const min = 1;
 const max = 50;
 const totalNumbers = 5;
-const time = 30;
+let time = 30;
 let numbers;
 let li = ``;
 
@@ -30,12 +30,11 @@ const generateRandomNumbers = (min, max, tot) => {
     return numbers;
 }
 
-console.log(generateRandomNumbers(1,50,5));
-
 // CORPO DEL PROGRAMMA
 // GENERAZIONE NUMERI CASUALI INVOCANDO LA FUNZIONE
 
 numbers = generateRandomNumbers(min, max, totalNumbers);
+console.log(numbers);
 
 // GENERO I LIST ITEM DA APPENDERE ALL'ELEMENTO DEL DOM
 for(let i=0; i<numbers.length; i++){
@@ -44,6 +43,15 @@ for(let i=0; i<numbers.length; i++){
 
 // INSERIMENTO LIST ITEM GENERATI NEL DOM
 numberList.innerHTML = li;
+
+// MOSTRO NEL DOM IL TIMER
+countdown.innerText = time;
+
+// FACCIO PARTIRE IL COUNTDOWN
+const timer = setInterval(() => {
+    time --;
+    countdown.innerText = time;
+}, 1000);
 
 
 
