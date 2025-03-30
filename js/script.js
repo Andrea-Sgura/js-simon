@@ -14,6 +14,22 @@ const max = 50;
 const totalNumbers = 5;
 const time = 30;
 
+// DEFINIZIONE DELLE FUNZIONI UTILI
+const generateRandomNumbers = (min, max, tot) => {
+    // DEFINISCO L'ARRAY VUOTO CHE CONTIENE I NUMERI CASUALI
+    const numbers = [];
+    // GENERO I 5 NUMERI CASUALi
+    for(let i=0; i<tot; i++){
+        const num = Math.floor(Math.random() * (max - min +1 )) + min;
+        numbers.push(num);
+    }
+
+    // RESTITUISCO L'ARRAY
+    return numbers;
+}
+
+console.log(generateRandomNumbers(1,50,5));
+
 
 
 
