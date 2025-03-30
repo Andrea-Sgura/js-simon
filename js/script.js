@@ -13,6 +13,8 @@ const min = 1;
 const max = 50;
 const totalNumbers = 5;
 const time = 30;
+let numbers;
+let li = ``;
 
 // DEFINIZIONE DELLE FUNZIONI UTILI
 const generateRandomNumbers = (min, max, tot) => {
@@ -33,7 +35,15 @@ console.log(generateRandomNumbers(1,50,5));
 // CORPO DEL PROGRAMMA
 // GENERAZIONE NUMERI CASUALI INVOCANDO LA FUNZIONE
 
-const numbers = generateRandomNumbers(min, max, totalNumbers);
+numbers = generateRandomNumbers(min, max, totalNumbers);
+
+// GENERO I LIST ITEM DA APPENDERE ALL'ELEMENTO DEL DOM
+for(let i=0; i<numbers.length; i++){
+    li += `<li>${numbers[i]}</li>`
+}
+
+// INSERIMENTO LIST ITEM GENERATI NEL DOM
+numberList.innerHTML = li;
 
 
 
