@@ -51,7 +51,15 @@ countdown.innerText = time;
 const timer = setInterval(() => {
     time --;
     countdown.innerText = time;
+    if(time === 0){
+        clearInterval(timer);
+        form.classList.remove(`d-none`);
+        numberList.classList.add(`d-none`);
+        instructions.innnerText = `Inserisci i valori che ricordi. Non è importante l\`ordine.`;
+    }
 }, 1000);
+
+
 
 
 
